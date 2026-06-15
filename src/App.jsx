@@ -137,7 +137,7 @@ function App() {
                   </a>
                 </div>
                 <Botao
-                  href={"/src/data/CV.docx"}
+                  href={"./data/CV.docx"}
                   download="CV.docx"
                   type="application/docx"
                 >
@@ -174,7 +174,7 @@ function App() {
             <div className={style.ladoDir}>
               <img src={logoCode} alt="Logo" className={style.logoCard} />
               <Botao
-                href={"/src/data/CV.docx"}
+                href={"./data/CV.docx"}
                 download="CV.docx"
                 type="application/docx"
               >
