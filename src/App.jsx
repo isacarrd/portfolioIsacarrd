@@ -11,14 +11,14 @@ import Botao from "./components/ui/Botao";
 import Texto from "./components/ui/Texto";
 import TextType from "./components/ui/TextType";
 
-import catLogo from "./assets/images/logos/catLogo-256.svg"
-import logoCode from "./assets/images/logos/teste.png"
-import linkdnWh from "./assets/images/icons/linkedin.svg"
-import githubWh from "./assets/images/icons/github.svg"
-import linkdnOut from "./assets/images/icons/linkedinOut.svg"
-import githubBl from "./assets/images/icons/githubBl.svg"
-import emailIco from "./assets/images/icons/email.png"
-import copyIco from "./assets/images/icons/copyright.svg"
+import copyIco from "./assets/images/icons/copyright.svg";
+import emailIco from "./assets/images/icons/email.png";
+import githubWh from "./assets/images/icons/github.svg";
+import githubBl from "./assets/images/icons/githubBl.svg";
+import linkdnWh from "./assets/images/icons/linkedin.svg";
+import linkdnOut from "./assets/images/icons/linkedinOut.svg";
+import catLogo from "./assets/images/logos/catLogo-256.svg";
+import logoCode from "./assets/images/logos/teste.png";
 
 function App() {
   const { t } = useTranslation();
@@ -137,9 +137,8 @@ function App() {
                   </a>
                 </div>
                 <Botao
-                  href={"./data/CV.docx"}
-                  download="CV.docx"
-                  type="application/docx"
+                  href={`${import.meta.env.BASE_URL}curriculo.docx}`}
+                  download="curriculo.docx"
                 >
                   <Texto as="span" color="var(--branco)" font="var(--botao)">
                     {t("btn.btnCv")}
@@ -174,9 +173,8 @@ function App() {
             <div className={style.ladoDir}>
               <img src={logoCode} alt="Logo" className={style.logoCard} />
               <Botao
-                href={"./data/CV.docx"}
-                download="CV.docx"
-                type="application/docx"
+                href={`${import.meta.env.BASE_URL}curriculo.docx}`}
+                download="curriculo.docx"
               >
                 <Texto as="span" color="var(--branco)" font="var(--botao)">
                   {t("btn.btnCv")}
