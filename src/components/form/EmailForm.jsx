@@ -105,13 +105,18 @@ function EmailForm() {
               value={name}
               onChange={(e) => {
                 setName(e.target.value);
-                if (emptyFields.name)
+                if (emptyFields.name) {
                   setEmptyFields({ ...emptyFields, name: false });
+                }
               }}
+              aria-invalid={emptyFields.name ? "true" : "false"}
+              aria-describedby={emptyFields.name ? "nome-error" : undefined}
             />
             {emptyFields.name && (
               <Texto
                 as="span"
+                id="nome-error"
+                role="alert"
                 color="var(--error-color)"
                 font="var(--sub)"
                 className={styles.msgErro}
@@ -125,9 +130,9 @@ function EmailForm() {
           <div className={styles.campo}>
             <Texto
               as="label"
+              htmlFor="user-email"
               color="var(--branco-btn)"
               font="var(--inputTitle)"
-              htmlFor="user-email"
             >
               {t("form.emailTitle")}
             </Texto>
@@ -138,18 +143,23 @@ function EmailForm() {
               id="user-email"
               placeholder={t("form.emailDesc")}
               className={`${styles.campoInput} ${
-                emptyFields.name ? styles.campoVazio : ""
+                emptyFields.email ? styles.campoVazio : ""
               }`}
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
-                if (emptyFields.email)
+                if (emptyFields.email) {
                   setEmptyFields({ ...emptyFields, email: false });
+                }
               }}
+              aria-invalid={emptyFields.email ? "true" : "false"}
+              aria-describedby={emptyFields.email ? "email-error" : undefined}
             />
             {emptyFields.email && (
               <Texto
                 as="span"
+                id="email-error"
+                role="alert"
                 color="var(--error-color)"
                 font="var(--sub)"
                 className={styles.msgErro}
@@ -176,7 +186,7 @@ function EmailForm() {
               id="user-assunto"
               placeholder={t("form.assuntoDesc")}
               className={`${styles.campoInput} ${
-                emptyFields.name ? styles.campoVazio : ""
+                emptyFields.title ? styles.campoVazio : ""
               }`}
               value={title}
               onChange={(e) => {
@@ -185,10 +195,14 @@ function EmailForm() {
                   setEmptyFields({ ...emptyFields, title: false });
                 }
               }}
+              aria-invalid={emptyFields.title ? "true" : "false"}
+              aria-describedby={emptyFields.title ? "assunto-error" : undefined}
             />
             {emptyFields.title && (
               <Texto
                 as="span"
+                id="assunto-error"
+                role="alert"
                 color="var(--error-color)"
                 font="var(--sub)"
                 className={styles.msgErro}
@@ -215,7 +229,7 @@ function EmailForm() {
               id="user-conteudo"
               placeholder={t("form.conteudoDesc")}
               className={`${styles.campoInput} ${styles.campoCont} ${
-                emptyFields.name ? styles.campoVazio : ""
+                emptyFields.message ? styles.campoVazio : ""
               }`}
               value={message}
               onChange={(e) => {
@@ -224,10 +238,14 @@ function EmailForm() {
                   setEmptyFields({ ...emptyFields, message: false });
                 }
               }}
+              aria-invalid={emptyFields.message ? "true" : "false"}
+              aria-describedby={emptyFields.message ? "conteudo-error" : undefined}
             />
             {emptyFields.message && (
               <Texto
                 as="span"
+                id="conteudo-error"
+                role="alert"
                 color="var(--error-color)"
                 font="var(--sub)"
                 className={styles.msgErro}
@@ -238,7 +256,7 @@ function EmailForm() {
           </div>
         </div>
         <Botao type="submit">
-          <Texto as="span" color="var(--branco)" font="var(--nav)" >
+          <Texto as="span" color="var(--branco)" font="var(--nav)">
             {t("btn.btnContato")}
           </Texto>
         </Botao>
