@@ -13,6 +13,8 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
+
+  cursor: pointer;
 }
 
 .langContainer:hover .arrowContainer:hover,
@@ -93,6 +95,7 @@ button {
 }
 
 .dropdownArea {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
