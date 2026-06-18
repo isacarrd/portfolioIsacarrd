@@ -35,6 +35,7 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   background-color: var(--cinza);
+  border: 2px solid transparent;
   border-radius: 0.9375rem;
   padding: 2rem;
 }
@@ -87,7 +88,7 @@ input:invalid:focus {
 }
 
 @media (max-width: 768px) {
-  .contato{
+  .contato {
     padding: 3.5rem 1.5rem;
     gap: 2rem;
   }
@@ -102,5 +103,9 @@ input:invalid:focus {
   }
   .campoCont {
     height: 8.75rem;
+  }
+  .campoVazio {
+    background-position: right 5px;
+    background-image: url("../../assets/images/icons/errorMob.svg");
   }
 }
