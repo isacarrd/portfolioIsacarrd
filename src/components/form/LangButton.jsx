@@ -25,13 +25,22 @@ function LangButton() {
     .includes("pt");
 
   return (
-    <button
+    <div
       className={`${styles.langContainer} ${isOpen ? styles.open : ""}`}
-      onClick={toggleMenu}
       onMouseLeave={() => setIsOpen(false)}
     >
       {/* Idioma Ativo (Sempre visível) */}
-      <div className={styles.activeArea} onClick={toggleMenu}>
+      <button
+        type="button"
+        className={styles.activeArea}
+        onClick={toggleMenu}
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+        aria-controls="menu-idiomas"
+        aria-label={`Alterar idioma. Idioma atual: ${
+          isPt ? "Português" : "Inglês"
+        }`}
+      >
         {/* Idioma */}
         <div className={styles.flagCont}>
           <div
@@ -44,24 +53,39 @@ function LangButton() {
           className={`${styles.arrowContainer} ${
             isOpen ? styles.arrowContainerTop : styles.arrowContainerDown
           }`}
+          aria-hidden="true"
         ></div>
-      </div>
+      </button>
 
       {/* Opções (Só aparecem quando aberto) */}
       {isOpen && (
-        <div
-          className={styles.dropdownArea}
-          onClick={(e) => changeLanguage(e, isPt ? "en" : "pt")}
-        >
-          <div
-            className={`${styles.flag} ${isPt ? styles.us : styles.br}`}
-          ></div>
-          <Texto as="span" font="var(--langButton)" color="var(--branco)" disableHover={true}>
-            {isPt ? "EN-US" : "PT-BR"}
-          </Texto>
+        <div id="menu-idiomas">
+          <button
+            className={styles.dropdownArea}
+            type="button"
+            onClick={(e) => {
+              changeLanguage(e, isPt ? "en" : "pt");
+              setIsOpen(false);
+            }}
+            aria-label={`Mudar para idioma ${isPt ? "Inglês" : "Português"}`}
+          >
+            <div
+              className={`${styles.flag} ${isPt ? styles.us : styles.br}`}
+              aria-hidden="true"
+            ></div>
+            <Texto
+              as="span"
+              font="var(--langButton)"
+              color="var(--branco)"
+              disableHover={true}
+              aria-hidden="true"
+            >
+              {isPt ? "EN-US" : "PT-BR"}
+            </Texto>
+          </button>
         </div>
       )}
-    </button>
+    </div>
   );
 }
 
