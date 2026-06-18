@@ -27,7 +27,12 @@ function ModalConfirmacao({ isOpen, onClose }) {
           <img src={confirmImg} alt="Confirmação" />
         </div>
         <Botao onClick={onClose}>
-          <Texto as="span" font="var(--botao)" color="var(--branco)">
+          <Texto
+            as="span"
+            font="var(--botao)"
+            color="var(--branco)"
+            aria-label="Botão de fechar Modal"
+          >
             {t("btn.btnFechar")}
           </Texto>
         </Botao>
@@ -55,7 +60,7 @@ function ModalProjeto({
       <div className={styles.focusModal}>
         <header className={styles.modalHeader}>
           <img src={logoCode} alt="Logo" />
-          <button type="button" onClick={onClose} className={styles.btnClose}>
+          <button type="button" onClick={onClose} className={styles.btnClose} aria-label="Botão de fechar Modal">
             <img src={xOut} alt="Close" />
           </button>
         </header>
