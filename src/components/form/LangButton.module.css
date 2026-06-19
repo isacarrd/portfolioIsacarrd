@@ -1,3 +1,9 @@
+*:focus-visible {
+  outline: none; /* Remove a borda padrão do navegador */
+  border-color: var(--laranja);
+  box-shadow: 0 0 8px var(--branco); /* Efeito de brilho */
+  background-color: transparent;
+}
 button {
   all: unset;
 }
