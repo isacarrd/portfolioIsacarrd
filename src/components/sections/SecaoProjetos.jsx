@@ -25,6 +25,7 @@ function SecaoProjetos() {
       <div className={styles.projs}>
         {listaProjetos.map((proj) => (
           <CardProj
+            aria-haspopup="true"
             key={proj.id}
             textoPadrao={t(proj.chaveTitulo)}
             bgImage={proj.bgImage}
