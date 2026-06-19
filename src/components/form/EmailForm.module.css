@@ -34,7 +34,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5rem;
-  background-color: var(--cinza);
+  background-color: var(--cinza) !important;
   border: 2px solid transparent;
   border-radius: 0.9375rem;
   padding: 2rem;
