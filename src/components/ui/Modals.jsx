@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Botao from "./Botao";
 import styles from "./Modals.module.css";
@@ -55,13 +56,43 @@ function ModalProjeto({
   if (!isOpen) return null;
   const { t } = useTranslation();
 
+  // função de acessibilidade
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    // só add o listener se o modal estiver aberto
+    if (isOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+
+    // remove o listener quando o modal fechar ou desmontar
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
   return (
-    <div className={styles.pjPosition}>
+    <div className={styles.pjPosition}
+      role="dialog"
+      aria-modal="true"
+      aria-label={tituloProj}
+    >
       <div className={styles.focusModal}>
         <header className={styles.modalHeader}>
           <img src={logoCode} alt="Logo" />
-          <button type="button" onClick={onClose} className={styles.btnClose} aria-label="Botão de fechar Modal">
-            <img src={xOut} alt="Close" />
+          <button
+            type="button"
+            onClick={onClose}
+            className={styles.btnClose}
+            aria-label="Botão de fechar Modal"
+          >
+            <img src={xOut} alt="" aria-hidden="true" />
           </button>
         </header>
         <div className={styles.projeto}>
