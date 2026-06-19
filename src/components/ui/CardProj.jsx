@@ -12,8 +12,18 @@ function CardProj({
   onClick,
 }) {
   const [isHovered, setIsHovered] = useState(false);
+
+  // Função de navegação com teclado!
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault(); 
+      onClick();
+    }
+  };
+
   return (
     <div
+      onKeyDown={handleKeyDown}
       onClick={onClick}
       className={styles.cardBase}
       onMouseEnter={() => setIsHovered(true)}
