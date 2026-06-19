@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <div className={style.canvasContainer}>
+      <div className={style.canvasContainer} aria-hidden="true">
         <ShaderGradientCanvas>
           <ShaderGradient
             control="query"
@@ -33,7 +33,7 @@ function App() {
           />
         </ShaderGradientCanvas>
       </div>
-      <div className={style.noise} />
+      <div className={style.noise} aria-hidden="true" />
       <Header />
       <section className={style.hero}>
         <div className={style.tit}>
@@ -88,7 +88,7 @@ function App() {
           </div>
         </div>
       </section>
-      <main>
+      <main tabIndex="-1">
         <section className={style.about} id="about">
           <div className={style.abtCont}>
             <div className={style.imgAbt}>
@@ -152,7 +152,7 @@ function App() {
         <SecaoProjetos />
       </main>
       <EmailForm />
-      <section id="card-info" className={style.cardInfo}>
+      <section id="card-info" className={style.cardInfo} aria-label="Informações de contato">
         <article className={style.cartao}>
           <span className={style.retangle}></span>
           <div className={style.cardCont}>
@@ -186,7 +186,7 @@ function App() {
       </section>
       <footer>
         <div className={style.fotTxt}>
-          <img src={copyIco} alt="Copyright" />
+          <img src={copyIco} alt="" aria-hidden="true" />
           <Texto
             as="span"
             color="var(--preto)"
