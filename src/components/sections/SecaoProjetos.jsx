@@ -18,7 +18,7 @@ function SecaoProjetos() {
 
 
   return (
-    <section className={styles.baseProjetos} id="projects">
+    <section className={styles.baseProjetos} id="projects" aria-label="Seção de Projetos">
       <Texto as="h2" color="var(--branco)" font="var(--h2)">
         {t("infos.title2")}
       </Texto>

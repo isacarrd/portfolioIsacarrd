@@ -17,7 +17,7 @@ export default function Header() {
     if (menuAberto) setMenuAberto(false);
   };
   return (
-    <header className={style.headerPort}>
+    <header className={style.headerPort} aria-label="Cabeçalho">
       <nav aria-label="Navegação">
         <button
           className={`${style.hamburger} ${

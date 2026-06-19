@@ -16,7 +16,7 @@ import typeIcon from "../../assets/images/devicons/typescriptOrange.svg";
 function SecaoHabilidades() {
   const { t } = useTranslation();
   return (
-    <section className={styles.habilidades} id="habilites">
+    <section className={styles.habilidades} id="habilites" aria-label="Seção de Habilidades">
       <Texto as="h2" color="var(--branco)" font="var(--h2)" textAlign="center">
         {t("infos.title1")}
       </Texto>

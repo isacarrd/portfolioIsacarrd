@@ -76,7 +76,7 @@ function EmailForm() {
     );
   }
   return (
-    <section className={styles.contato} id="contact">
+    <section className={styles.contato} id="contact" aria-label="Seção de email">
       <Texto as="h2" font="var(--h2)" color="var(--branco)">
         {t("infos.title3")}
       </Texto>
