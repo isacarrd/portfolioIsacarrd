@@ -137,7 +137,7 @@ function App() {
                   </a>
                 </div>
                 <Botao
-                  href={`${import.meta.env.BASE_URL}curriculo.docx}`}
+                  href={`${import.meta.env.BASE_URL}curriculo.docx`}
                   download="curriculo.docx"
                 >
                   <Texto as="span" color="var(--branco)" font="var(--botao)">
@@ -152,7 +152,11 @@ function App() {
         <SecaoProjetos />
       </main>
       <EmailForm />
-      <section id="card-info" className={style.cardInfo} aria-label="Informações de contato">
+      <section
+        id="card-info"
+        className={style.cardInfo}
+        aria-label="Informações de contato"
+      >
         <article className={style.cartao}>
           <span className={style.retangle}></span>
           <div className={style.cardCont}>
