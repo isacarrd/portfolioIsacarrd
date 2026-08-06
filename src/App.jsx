@@ -20,6 +20,8 @@ import linkdnOut from "./assets/images/icons/linkedinOut.svg";
 import catLogo from "./assets/images/logos/catLogo-256.svg";
 import logoCode from "./assets/images/logos/teste.png";
 
+import curriculoFile from "./assets/CV.docx"
+
 function App() {
   const { t } = useTranslation();
 
@@ -136,10 +138,7 @@ function App() {
                     <img src={githubWh} alt="Github" />
                   </a>
                 </div>
-                <Botao
-                  href={`${import.meta.env.BASE_URL}curriculo.docx`}
-                  download="curriculo.docx"
-                >
+                <Botao href={curriculoFile} download="curriculo.docx">
                   <Texto as="span" color="var(--branco)" font="var(--botao)">
                     {t("btn.btnCv")}
                   </Texto>
@@ -176,10 +175,7 @@ function App() {
             </div>
             <div className={style.ladoDir}>
               <img src={logoCode} alt="Logo" className={style.logoCard} />
-              <Botao
-                href={`${import.meta.env.BASE_URL}curriculo.docx}`}
-                download="curriculo.docx"
-              >
+              <Botao href={curriculoFile} download="curriculo.docx">
                 <Texto as="span" color="var(--branco)" font="var(--botao)">
                   {t("btn.btnCv")}
                 </Texto>
