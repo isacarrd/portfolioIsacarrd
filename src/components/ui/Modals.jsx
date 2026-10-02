@@ -53,30 +53,27 @@ function ModalProjeto({
   urlProj,
   icoProj,
 }) {
-  if (!isOpen) return null;
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
-  // função de acessibilidade
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape") {
-        onClose();
-      }
-    };
+    useEffect(() => {
+      if (!isOpen) return;
 
-    // só add o listener se o modal estiver aberto
-    if (isOpen) {
+      const handleKeyDown = (e) => {
+        if (e.key === "Escape") onClose();
+      };
       document.addEventListener("keydown", handleKeyDown);
-    }
 
-    // remove o listener quando o modal fechar ou desmontar
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isOpen, onClose]);
+      const overflowOriginal = document.body.style.overflow;
+      document.body.style.overflow = "hidden"; // página não rola atrás do modal
+
+      return () => {
+        document.removeEventListener("keydown", handleKeyDown);
+        document.body.style.overflow = overflowOriginal;
+      };
+    }, [isOpen, onClose]);
 
   if (!isOpen) return null;
-
+  
   return (
     <div className={styles.pjPosition}
       role="dialog"
