@@ -53,10 +53,8 @@
 /* MODAL DE PROJETO/FOCUS */
 .pjPosition {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  padding: 1rem;
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -65,17 +63,21 @@
 }
 
 .focusModal {
+  width: 68.125rem;
+  max-width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
   background-color: var(--preto);
   border: 0.2px solid var(--cinza);
-  width: 68.125rem;
-  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center;*/
+  scrollbar-color: var(--laranja) transparent;
+  scrollbar-width: thin;
 }
 
-.modalHeader{
+.modalHeader {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -89,7 +91,7 @@ button {
   background-color: transparent;
 }
 
-.btnClose:hover{
+.btnClose:hover {
   cursor: pointer;
   background-color: #2424249f;
 }
@@ -149,7 +151,7 @@ header img {
 .linguagens {
   display: flex;
   flex-direction: row;
-  gap: .75rem;
+  gap: 0.75rem;
 }
 
 .langIcon {
@@ -159,37 +161,40 @@ header img {
 
 @media (max-width: 1024px) {
   .focusModal {
-    width: 20rem;
+    width: 100%;
+    max-width: 36rem;
   }
   .modalHeader {
     padding: 1rem 1.5rem;
   }
-  header img {
+  .modalHeader img {
     width: 2rem;
     height: 2rem;
   }
   .projeto {
-    padding: 1.5rem 3rem;
+    width: 100%;
+    padding: 2rem 1.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.75rem;
   }
-  .fotoProj{
-    width: 17rem;
-    height: 13.125rem;
+  .fotoProj {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 4;
   }
-  .infoBotoes{
+  .infoBotoes {
     gap: 1.125rem;
   }
-  .nomeDescricao{
-    gap: .75rem;
+  .nomeDescricao {
+    gap: 0.75rem;
   }
-  .descricao{
+  .descricao {
     gap: 2rem;
-    padding: 1.5rem 0.75rem;
+    padding: 1.5rem 0;
   }
-  .langIcon{
+  .langIcon {
     width: 2rem;
     height: 2rem;
   }
