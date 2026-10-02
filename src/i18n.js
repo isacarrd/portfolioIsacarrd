@@ -61,7 +61,7 @@ const resources = {
         subtitle2: "Página com navegação simples com o intuito de localizar e valorizar um comércio, demostrando informações do mercadinho.",
         subtitle3: "Página com navegação simples, tendo como objetivo promover um produto e sua marca, destacando características e seus respectivos parceiros.",
         subtitle4: "Projeto acadêmico feito para botar em prática o consumo de API através do JavaScript. Página intuitiva e simples, tendo apenas como objetivo o JS.",
-        subtitle5: "Projeto pessoal para por em prática conceitos fundamentais do ReactJS, como reutilização de componentes, props, hooks, validação de formulários, renderização condicionada e criação/exclusão de itens."
+        subtitle5: "Projeto pessoal para por em prática conceitos fundamentais do ReactJS, como reutilização de componentes, props, hooks, validação de formulários, renderização condicionada e criação/exclusão de itens. Este esboço visa 3 fases + os testes, vale a pena dar uma olhada no repositório para conhecer-lo."
       }
     }
   },
@@ -123,7 +123,7 @@ const resources = {
         subtitle2: "A page with simple navigation aimed at locating and promoting a business. Displaying information about the small market.",
         subtitle3: "A page with simple navigation, aimed at promoting a product and its brand, highlighting its features and respective partners.",
         subtitle4: "An academic project designed to put API consumption via JavaScript into practice. It is a simple, intuitive page with a focus solely on JavaScript.",
-        subtitle5: "A personal project to put fundamental ReactJS concepts into practice, such as component reusability, props, hooks, form validation, conditional rendering, and creating/deleting items.",
+        subtitle5: "A personal project designed to put fundamental ReactJS concepts into practice—such as component reusability, props, hooks, form validation, conditional rendering, and item creation/deletion. The project outline covers three phases plus testing; it is worth checking out the repository to learn more.",
       }
     }
   }
