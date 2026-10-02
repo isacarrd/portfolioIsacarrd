@@ -1,16 +1,17 @@
-import projHearOfPoets from "./projects/heartOfpoets.png"
-import projMercadinho from "./projects/mercadinhoAragao.png"
-import projRedragon from "./projects/redDragon.png"
+import projHearOfPoets from "./projects/heartOfpoets.png";
+import projMercadinho from "./projects/mercadinhoAragao.png";
+import projRedragon from "./projects/redDragon.png";
+import projViacep from "./projects/viacep.png";
+import projGerenProd from "./projects/gerenciadorProdutos.png"
 
-import jsIcon from "../assets/images/devicons/javascript.svg";
-import reactIcon from "../assets/images/devicons/reactnative.svg";
-import nodeIcon from "../assets/images/devicons/nodejs.svg";
-import typeIcon from "../assets/images/devicons/typescript.svg";
-import supaIcon from "../assets/images/devicons/supabase.svg";
-import gitIcon from "../assets/images/devicons/git.svg";
 import cssIcon from "../assets/images/devicons/css3.svg";
-import htmlIcon from "../assets/images/devicons/html5.svg";
 import figIcon from "../assets/images/devicons/figma.svg";
+import gitIcon from "../assets/images/devicons/git.svg";
+import htmlIcon from "../assets/images/devicons/html5.svg";
+import jsIcon from "../assets/images/devicons/javascript.svg"
+import reactIcon from "../assets/images/devicons/reactnative.svg"
+import tailwindIcon from "../assets/images/devicons/tailwindcss.png"
+
 
 export const listaProjetos = [
   {
@@ -42,5 +43,25 @@ export const listaProjetos = [
     icoProj: [htmlIcon, cssIcon, gitIcon, figIcon],
     urlProj: "https://redragon-draconic.vercel.app/",
     urlRepo: "https://github.com/isacarrd/redragon-draconic",
+  },
+  {
+    id: 4,
+    chaveTitulo: "cardProj.proj4",
+    chaveDesc: "modals.subtitle4",
+    bgImage: projViacep,
+    bgAlt: "Projeto Viacep",
+    icoProj: [jsIcon, htmlIcon, cssIcon, gitIcon, figIcon],
+    urlProj: "https://viacep-tawny.vercel.app/",
+    urlRepo: "https://github.com/isacarrd/viaCep",
+  },
+  {
+    id: 5,
+    chaveTitulo: "cardProj.proj5",
+    chaveDesc: "modals.subtitle5",
+    bgImage: projGerenProd,
+    bgAlt: "Projeto Gerenciador de Produtos",
+    icoProj: [reactIcon, jsIcon, htmlIcon, tailwindIcon, gitIcon, figIcon],
+    urlProj: "https://gerenciador-fase1.vercel.app/",
+    urlRepo: "https://github.com/isacarrd/gereciadorTeste",
   },
 ];

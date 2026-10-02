@@ -51,13 +51,17 @@ const resources = {
         hover: 'Info+',
         proj1: "heartOfPoets",
         proj2: "Mercadinho Aragão",
-        proj3: "Redragon K530"
+        proj3: "Redragon K530",
+        proj4: "ViaCep",
+        proj5: "Gerenciador de Produtos"
       },
       modals: {
         confirmation: "Mensagem enviada com sucesso!",
         subtitle1: "Página com navegação simples, imitando a estilização de uma rede social, sendo voltada para poesias e fotografia.",
         subtitle2: "Página com navegação simples com o intuito de localizar e valorizar um comércio, demostrando informações do mercadinho.",
         subtitle3: "Página com navegação simples, tendo como objetivo promover um produto e sua marca, destacando características e seus respectivos parceiros.",
+        subtitle4: "Projeto acadêmico feito para botar em prática o consumo de API através do JavaScript. Página intuitiva e simples, tendo apenas como objetivo o JS.",
+        subtitle5: "Projeto pessoal para por em prática conceitos fundamentais do ReactJS, como reutilização de componentes, props, hooks, validação de formulários, renderização condicionada e criação/exclusão de itens."
       }
     }
   },
@@ -110,12 +114,16 @@ const resources = {
         proj1: "heartOfPoets",
         proj2: "Mercadinho Aragão",
         proj3: "Redragon K530",
+        proj4: "ViaCep",
+        proj5: "Product Manager"
       },
       modals: {
         confirmation: "Message sent successfully!",
         subtitle1: "A page with simple navigation, mimicking the style of a social network, focused on poetry and photography.",
         subtitle2: "A page with simple navigation aimed at locating and promoting a business. Displaying information about the small market.",
         subtitle3: "A page with simple navigation, aimed at promoting a product and its brand, highlighting its features and respective partners.",
+        subtitle4: "An academic project designed to put API consumption via JavaScript into practice. It is a simple, intuitive page with a focus solely on JavaScript.",
+        subtitle5: "A personal project to put fundamental ReactJS concepts into practice, such as component reusability, props, hooks, form validation, conditional rendering, and creating/deleting items.",
       }
     }
   }
